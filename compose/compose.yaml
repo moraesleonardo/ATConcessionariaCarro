@@ -1,0 +1,99 @@
+services:
+  mongo:
+    container_name: MONGO-SERVER
+    image: mongo:7-jammy
+    volumes:
+      - ./mongodb-data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - carro_acme
+  mongo-express:
+    image: mongo-express:1.0.2-20-alpine3.19
+    links:
+      - mongo
+    ports:
+      - "8099:8081"
+    networks:
+      - carro_acme
+    depends_on:
+      - mongo
+  eureka:
+    image: moraesleonardo/eureka:latest
+    container_name: EUREKA-SERVER
+    ports:
+      - "8761:8761"
+    networks:
+      - carro_acme
+  carro-service:
+    image: moraesleonardo/carro:latest
+    networks:
+      - carro_acme
+    depends_on:
+      - eureka
+  fabricante-service:
+    image: moraesleonardo/fabricante:latest
+    networks:
+      - carro_acme
+    depends_on:
+      - eureka
+  imposto-service:
+    image: moraesleonardo/imposto:latest
+    networks:
+      - carro_acme
+    depends_on:
+      - eureka
+  pedido-service:
+    image: moraesleonardo/pedido:latest
+    networks:
+      - carro_acme
+    depends_on:
+      - eureka
+      - mongo
+
+  gateway:
+    image: moraesleonardo/gateway:latest
+    networks:
+      - carro_acme
+    depends_on:
+      - pedido-service
+      - eureka
+      - imposto-service
+      - carro-service
+      - fabricante-service
+  rabbit-server:
+    image: rabbitmq:3-management
+    container_name: rabbit-server
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - carro_acme
+  notafiscal:
+    image: moraesleonardo/notafiscal:latest
+    depends_on:
+      - rabbit-server
+    networks:
+      - carro_acme
+    environment:
+      RABBITMQ_HOST: rabbit-server
+      RABBITMQ_USERNAME: guest
+      RABBITMQ_PASSWORD: guest
+
+  notafiscal-worker:
+    image: moraesleonardo/notafiscal-worker:latest
+    depends_on:
+      - rabbit-server
+    networks:
+      - carro_acme
+    environment:
+      RABBITMQ_HOST: rabbit-server
+      RABBITMQ_USERNAME: guest
+      RABBITMQ_PASSWORD: guest
+
+networks:
+  carro_acme:
+    driver: bridge

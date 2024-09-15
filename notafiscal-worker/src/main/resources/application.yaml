@@ -1,0 +1,25 @@
+server:
+  port: 0
+
+spring:
+  rabbitmq:
+    host: rabbit-server
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 10
+          initial-interval: 5000
+          multiplier: 2.0
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://EUREKA-SERVER:8761/eureka

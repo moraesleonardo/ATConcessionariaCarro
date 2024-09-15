@@ -1,0 +1,18 @@
+<configuration>
+    <!-- Inclui a configuração padrão do Spring Boot para Logback -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- Define o appender para o Papertrail -->
+    <appender class="ch.qos.logback.classic.net.SyslogAppender" name="PAPERTRAIL">
+        <syslogHost>logs4.papertrailapp.com</syslogHost>
+        <port>52938</port>
+        <facility>USER</facility>
+        <!-- Define o padrão de sufixo para os logs -->
+        <suffixPattern>[%thread] %logger %msg</suffixPattern>
+    </appender>
+
+    <!-- Configura o logger raiz para usar o appender PAPERTRAIL -->
+    <root level="INFO">
+        <appender-ref ref="PAPERTRAIL"/>
+    </root>
+</configuration>
