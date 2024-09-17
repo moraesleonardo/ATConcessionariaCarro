@@ -9,9 +9,7 @@
         <option value="$PROJECT_DIR$/carro-service/pom.xml" />
         <option value="$PROJECT_DIR$/pedido-service/pom.xml" />
         <option value="$PROJECT_DIR$/imposto-service/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-server-pb/pom.xml" />
         <option value="$PROJECT_DIR$/notafiscal-worker/pom.xml" />
-        <option value="$PROJECT_DIR$/fabricante-service/pom.xml" />
       </list>
     </option>
   </component>

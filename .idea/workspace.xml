@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c51b9b5-9d0e-4915-9fcc-809bac050197" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eureka-server-pb/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server-pb/docker/eureka-server-pb-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fabricante-service/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabricante-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fabricante-service/pom.xml" afterDir="false" />
+    <list default="true" id="9d88e6cc-20b6-4f59-976b-10fd9049e4f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TP3SETTESTANDOPB.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PB_concessionaria" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server-pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabricante-service" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +23,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/eureka-server-pb" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
+  "associatedIndex": 6
 }]]></component>
-  <component name="ProjectId" id="2lwdsiXWgHMSv4SiJsscQlgHKQN" />
+  <component name="ProjectId" id="2mAuuJS8hOVbdytJR7rnxRf3CeS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,10 +38,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
@@ -55,20 +54,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.PedidoServiceApplication">
-    <configuration name="EurekaServerPbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="eureka-server-pb" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="info.moraes.eurekaserverpb.EurekaServerPbApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FabricanteServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="fabricante-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="info.moraes.fabricanteservice.FabricanteServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ImpostoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="imposto-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="info.moraes.impostoservice.ImpostoServiceApplication" />
@@ -102,12 +87,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2c51b9b5-9d0e-4915-9fcc-809bac050197" name="Changes" comment="" />
-      <created>1726095281121</created>
+      <changelist id="9d88e6cc-20b6-4f59-976b-10fd9049e4f2" name="Changes" comment="" />
+      <created>1726531926021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1726095281121</updated>
-      <workItem from="1726095282223" duration="414000" />
+      <updated>1726531926021</updated>
+      <workItem from="1726531928912" duration="85000" />
     </task>
     <servers />
   </component>

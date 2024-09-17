@@ -8,20 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="notafiscal-worker" />
         <module name="carro-service" />
-        <module name="notafiscal" />
-        <module name="fabricante-service" />
         <module name="imposto-service" />
-        <module name="eureka-server-pb" />
         <module name="pedido-service" />
         <module name="gateway" />
+        <module name="notafiscal" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="carro-service" options="-parameters" />
-      <module name="eureka-server-pb" options="-parameters" />
-      <module name="fabricante-service" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="imposto-service" options="-parameters" />
       <module name="notafiscal" options="-parameters" />
